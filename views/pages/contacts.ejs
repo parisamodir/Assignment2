@@ -1,0 +1,88 @@
+<!-- file name:contact.ejs
+Parisa Modirshahla
+Student number: 301138044
+Date: september 21, 2021  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contacts</title>
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./owl.carousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./owl.carousel/dist/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Content/app.css" />
+  </head>
+  <body>
+    <%- include('../partials/header')%>
+
+    <nav aria-label="breadcrumb" class="mx-3 text-light mt-3">
+      <ol class="breadcrumb container">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">contacts</li>
+      </ol>
+    </nav>
+    <main class="my-4 container">
+      <div class="card text-center">
+        <div class="card-header pattern">contacts</div>
+        <div class="card-body">
+          <a class="btn btn-outline-primary d-block" href="/contacts/create">
+            Create
+          </a>
+          <div class="row">
+            <% for( let index = 0; index < data.length; index++ ) { %>
+            <div class="card">
+              <div class="card-header"><%= data[index].name %></div>
+              <div class="card-body">
+                <p><%= data[index].name+ " "+ data[index].familly %></p>
+                <p><%= data[index].email %></p>
+                <p><%= data[index].phonenumber %></p>
+              </div>
+              <div class="d-flex">
+                <a
+                  href="/contacts/delete/<%= data[index]._id %>"
+                  class="btn col-6 btn-danger"
+                >
+                  Delete
+                </a>
+                <a
+                  href="/contacts/edit/<%= data[index]._id %>"
+                  class="btn col-6 btn-success"
+                >
+                  Update
+                </a>
+              </div>
+            </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer pattern row text-muted">
+        <div class="col-md-6">
+          <i class="fas fa-envelope mr-3"></i>Email: info@example.com
+        </div>
+        <div class="col-md-6">
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <script src="./jquery/dist/jquery.min.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="./owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="/Scripts/app.js"></script>
+  </body>
+</html>

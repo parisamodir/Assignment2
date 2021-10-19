@@ -1,0 +1,81 @@
+ <!-- file name:aboutme.ejs
+Parisa Modirshahla
+Student number: 301138044
+Date: september 21, 2021  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me</title>
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./owl.carousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./owl.carousel/dist/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Content/app.css" />
+  </head>
+  <body>
+    <%- include('../partials/header')%>
+    <nav aria-label="breadcrumb" class="mx-3 text-light mt-3 link">
+      <ol class="breadcrumb container">
+        <li class="breadcrumb-item active"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">About Me</li>
+      </ol>
+    </nav>
+    <main class="my-4 container">
+      <div class="card text-center">
+        <div class="card-header pattern">Parisa ModirShahla</div>
+        <div class="card-body d-flex align-items-center">
+          <img
+            src="/image/parisa.jpeg"
+            class=" profile m"
+            alt=""
+          />
+          
+         <div>
+          <p class="font-inde ">
+            Passionate about the intersection of tech and design. She loves
+            people and wants to give them the best experience using her
+            expertise. Further, her mission is to solve problems in the world
+            full of questions.
+          </p>
+          <div>
+            <a
+              href="/Content/Parisa Modirshahla.pdf"
+              class="btn pattern"
+              >Download My resume</a
+            >
+          </div>
+         </div>
+        </div>
+        
+      </div>
+      <div class="card-footer pattern row text-muted">
+        <div class="col-md-6">
+          <i class="fas fa-envelope mr-3"></i> parisa.modirshahla@gmail.com
+        </div>
+        <div class="col-md-6">
+          <i class="fas fa-phone mr-3"></i> (437) 771 2484
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <script src="./jquery/dist/jquery.min.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="./owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="/Scripts/app.js"></script>
+  </body>
+</html>

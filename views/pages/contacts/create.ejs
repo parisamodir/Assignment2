@@ -1,0 +1,201 @@
+<!-- file name:contact.ejs
+Parisa Modirshahla
+Student number: 301138044
+Date: september 21, 2021  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="/owl.carousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/owl.carousel/dist/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/Content/app.css" />
+  </head>
+  <body>
+    <%- include('../../partials/header')%>
+
+    <nav aria-label="breadcrumb" class="mx-3 text-light mt-3">
+      <ol class="breadcrumb container">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Login</li>
+      </ol>
+    </nav>
+    <main class="my-4 container">
+      <div class="card text-center">
+        <div class="card-header pattern">Login</div>
+        <div class="card-body">
+         <% if ( typeof(data) !="undefined") { %>
+          <form
+          action="/contacts/add/<%= data._id %>"
+          method="post"
+          id="contactForm"
+        >
+          <!-- Name input -->
+          <div class="mb-3">
+            <label class="form-label" for="name">Name</label>
+            <input
+              class="form-control"
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Name"
+              value="<%= data.name %>"
+            />
+            <div class="invalid-feedback">Name is required.</div>
+          </div>
+          <!-- Name input -->
+
+          <div class="mb-3">
+            <label class="form-label" for="name">familly name</label>
+            <input
+              class="form-control"
+              id="familly"
+              type="text"
+              name="familly"
+              placeholder="familly"
+              value="<%= data.familly %>"
+            />
+            <div class="invalid-feedback">familly is required.</div>
+          </div>
+
+          <!-- Email address input -->
+          <div class="mb-3">
+            <label class="form-label" for="phone">phone</label>
+            <input
+              class="form-control"
+              id="phone"
+              type="tel"
+              name="phonenumber"
+              placeholder="phone"
+              value="<%= data.phonenumber %>"
+            />
+            <div class="invalid-feedback">phonenumber is required.</div>
+            <div class="invalid-feedback">phonenumber is not valid.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="email">email</label>
+            <input
+              class="form-control"
+              id="email"
+              type="email"
+              name="email"
+              placeholder="email"
+              value="<%= data.email %>"
+            />
+            <div class="invalid-feedback">email is required.</div>
+            <div class="invalid-feedback">email is not valid.</div>
+          </div>
+          <!-- Form submit button -->
+          <div class="d-flex">
+            <button
+              class="btn col-6 btn-outline-info  btn_submit"
+              id="submitButton"
+              type="submit"
+            >
+              Submit
+            </button>
+            <a href="/contacts" class="btn col-6 btn-outline-info ">Cancel</a>
+          </div>
+        </form>
+         <% } else { %>
+          <form
+          action="/contacts/add"
+          method="post"
+          id="contactForm"
+        >
+          <!-- Name input -->
+          <div class="mb-3">
+            <label class="form-label" for="name">Name</label>
+            <input
+              class="form-control"
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Name"
+            />
+            <div class="invalid-feedback">Name is required.</div>
+          </div>
+          <!-- Name input -->
+
+          <div class="mb-3">
+            <label class="form-label" for="name">familly name</label>
+            <input
+              class="form-control"
+              id="familly"
+              type="text"
+              name="familly"
+              placeholder="familly"
+            />
+            <div class="invalid-feedback">familly is required.</div>
+          </div>
+
+          <!-- Email address input -->
+          <div class="mb-3">
+            <label class="form-label" for="phone">phone</label>
+            <input
+              class="form-control"
+              id="phone"
+              type="tel"
+              name="phonenumber"
+              placeholder="phone"
+            />
+            <div class="invalid-feedback">phonenumber is required.</div>
+            <div class="invalid-feedback">phonenumber is not valid.</div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="email">email</label>
+            <input
+              class="form-control"
+              id="email"
+              type="email"
+              name="email"
+              placeholder="email"
+            />
+            <div class="invalid-feedback">email is required.</div>
+            <div class="invalid-feedback">email is not valid.</div>
+          </div>
+          <!-- Form submit button -->
+          <div class="d-grid">
+            <button
+              class="btn btn-outline-info btn-lg btn_submit"
+              id="submitButton"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+          <% } %>
+        </div>
+      </div>
+      <div class="card-footer pattern row text-muted">
+        <div class="col-md-6">
+          <i class="fas fa-envelope mr-3"></i>Email: info@example.com
+        </div>
+        <div class="col-md-6">
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88
+        </div>
+      </div>
+    </main>
+    <%- include('../../partials/footer') %>
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="/Scripts/app.js"></script>
+  </body>
+</html>

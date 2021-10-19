@@ -1,0 +1,117 @@
+ <!-- file name:contact.ejs
+Parisa Modirshahla
+Student number: 301138044
+Date: september 21, 2021  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact me</title>
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./owl.carousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./owl.carousel/dist/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Content/app.css" />
+  </head>
+  <body>
+    <%- include('../partials/header')%>
+
+    
+    <nav aria-label="breadcrumb" class="mx-3 text-light mt-3">
+      <ol class="breadcrumb container">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact Me</li>
+      </ol>
+    </nav>
+    <main class="my-4 container">
+      <div class="card text-center">
+        <div class="card-header pattern">Contact Me</div>
+        <div class="card-body">
+          <form
+            action="/"
+            method="GET"
+            id="contactForm"
+          >
+            <!-- Name input -->
+            <div class="mb-3">
+              <label class="form-label" for="name">Name</label>
+              <input
+                class="form-control"
+                id="name"
+                type="text"
+                placeholder="Name"
+              />
+              <div class="invalid-feedback">Name is required.</div>
+            </div>
+
+            <!-- Email address input -->
+            <div class="mb-3">
+              <label class="form-label" for="emailAddress">Email Address</label>
+              <input
+                class="form-control"
+                id="emailAddress"
+                type="email"
+                placeholder="Email Address"
+              />
+              <div class="invalid-feedback">Email Address is required.</div>
+              <div class="invalid-feedback">
+                Email Address Email is not valid.
+              </div>
+            </div>
+
+            <!-- Message input -->
+            <div class="mb-3">
+              <label class="form-label" for="message">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                type="text"
+                placeholder="Message"
+                style="height: 10rem"
+              ></textarea>
+              <div class="invalid-feedback">Message is required.</div>
+            </div>
+
+            <!-- Form submit button -->
+            <div class="d-grid">
+              <button
+                class="btn btn-outline-info btn-lg btn_submit"
+                id="submitButton"
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+       
+      </div>
+      <div class="card-footer pattern row text-muted">
+        <div class="col-md-6">
+          <i class="fas fa-envelope mr-3"></i>Email: info@example.com
+        </div>
+        <div class="col-md-6">
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <script src="./jquery/dist/jquery.min.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="./owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="/Scripts/app.js"></script>
+  </body>
+</html>

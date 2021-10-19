@@ -1,0 +1,25 @@
+{
+  "name": "week-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@popperjs/core": "^2.10.1",
+    "bootstrap": "^5.1.1",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "1.17.2",
+    "http-errors": "^1.7.2",
+    "jquery": "^3.6.0",
+    "mongoose": "6.0.11",
+    "morgan": "^1.10.0",
+    "owl.carousel": "2.3.4"
+  }
+}

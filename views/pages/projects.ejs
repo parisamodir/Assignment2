@@ -1,0 +1,121 @@
+ <!-- file name:projects.ejs
+Parisa Modirshahla
+Student number: 301138044
+Date: september 21, 2021  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./owl.carousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./owl.carousel/dist/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Content/app.css" />
+  </head>
+  <body>
+    <%- include('../partials/header')%>
+    <nav aria-label="breadcrumb" class="mx-3 text-light mt-3">
+      <ol class="breadcrumb container">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active " aria-current="page">Projects</li>
+      </ol>
+    </nav>
+    <main class="my-4">
+      <div class="container">
+        <h1 class="text-center text-black font-monospace mt-3 font_mission">My Projects</h1>
+        <div class="row justify-content-between gy-3 mt-4">
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem">
+              <img
+                src="/image/Project-1.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Realtor Website</h5>
+                <p class="card-text">
+                  A relator personal website.
+                  Show listings of new houses.
+                  Consist of  pages incluing about me, site map, contact 
+                </p>
+                <a href="#" class="btn pattern">See More</a>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem">
+              <img
+                src="/image/Project-2.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Shopping Website</h5>
+                <p class="card-text">
+                  An imaginary website template for digital products and you can add products to shopping cart. 
+                </p>
+                <a href="#" class="btn pattern">See More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem">
+              <img
+                src="/image/Project-3.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Apple store Website</h5>
+                <p class="card-text">
+                  It shows where the apple stores are located in Canada and show details of a specific product eg.apple watch.
+                  
+                </p>
+                <a href="#" class="btn pattern">See More</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3 ">
+            <div class="card" style="width: 16rem">
+              <img
+                src="/image/Project-4.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Admin dashboard </h5>
+                <p class="card-text">
+                  It provides convenient shortcuts for common management tasks and some server information
+                </p>
+                <a href="#" class="btn pattern">See More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <script src="./jquery/dist/jquery.min.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="./owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="/Scripts/app.js"></script>
+  </body>
+</html>

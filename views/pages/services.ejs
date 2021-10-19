@@ -1,0 +1,104 @@
+ <!-- file name:services.ejs
+Parisa Modirshahla
+Student number: 301138044
+Date: september 21, 2021  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service</title>
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./owl.carousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./owl.carousel/dist/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Content/app.css" />
+  </head>
+  <body>
+    <%- include('../partials/header')%>
+    <nav aria-label="breadcrumb" class="mx-3 text-light mt-3">
+      <ol class="breadcrumb container">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">services</li>
+      </ol>
+    </nav>
+    <main class="my-4 container">
+      <div class="row gy-3 mt-1">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header pattern">SEO</div>
+            <div class="card-body">
+              <h5 class="card-title">Improve your SEO</h5>
+              <p class="card-text">
+                I use a variety of link sources to build high-quality backlinks to your website. In addition, I offer recommendations for on-page optimization and technical SEO. These are the most important factors to consider when attempting to rank in the top Google results.
+              </p>
+              <!-- copyright:-----https://medium.com/startup-grind/seo-is-not-hard-a-step-by-step-seo-tutorial-for-beginners-that-will-get-you-ranked-every-single-1b903b3ab6bb -->
+              <img class="img-service" src="https://miro.medium.com/max/3580/1*TtZ1bAE8DF-RNvBYYXQHgA.jpeg" alt="seo">
+              <a href="#" class="btn pattern">Contact Me</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header pattern">Digital Marketing</div>
+            <div class="card-body">
+              <h5 class="card-title">Grow your business</h5>
+              <p class="card-text">
+               <!-- copyright---- https://solutions.searchenginepeople.com/win-with-seo/?utm_term=seo%20marketing&utm_campaign=SEO&utm_source=adwords&utm_medium=ppc&hsa_tgt=kwd-41674560&hsa_grp=130503258627&hsa_src=g&hsa_net=adwords&hsa_mt=b&hsa_ver=3&hsa_ad=547569797887&hsa_acc=9679287174&hsa_kw=seo%20marketing&hsa_cam=1586039024&gclid=Cj0KCQjw18WKBhCUARIsAFiW7JyxWrwAtQr-IrDx3EDNNZDOvJi6hUzsNaA89YXGsGICqWSvpZeLsHMaArjIEALw_wcB -->
+               Put your marketing expenditures to work for you and track the real value of your money. Begin tracking revenue, customer lifetime value, and even brand lift. 
+              </p>
+              <img class="img-service" src="https://www.thebalancecareers.com/thmb/JtZcIl70DTZ-mpWMMUQwGroVWmI=/300x200/filters:no_upscale():max_bytes(150000):strip_icc():saturation(0.2):brightness(10):contrast(5):format(webp)/digital-marketing-1222811180-3968de5d1f19400a88b1e5e44cd9fae4.jpg" alt="">
+              <a href="#" class="btn pattern">Contact Me</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header pattern">Website</div>
+            <div class="card-body">
+              <h5 class="card-title">Create profetional Website</h5>
+              <p class="card-text">
+                <!--copyright:----- https://www.chetu.com/solutions/web-development.php?keyword=website%20creating&gclid=Cj0KCQjw18WKBhCUARIsAFiW7JzvMfLZpupPN0oVl16he82zXY_PS0uDOI8kcgoP90Nm_w4VEo1-FTgaAuY8EALw_wcB -->
+                I have the solution for you, whether you need a newly created website to boost consumer interaction, a web portal to better visibility and management, or a comprehensive and feature-rich web app to automate business processes.
+              </p>
+              <!--copyright:---- https://uwaterloo.ca/arts-computing-newsletter/winter-2017/winter-2017/personal-websites -->
+              <img class="img-service" src="https://uwaterloo.ca/arts-computing-newsletter/sites/ca.arts-computing-newsletter/files/styles/original/public/uploads/images/build_website.jpg?itok=sYGmVk7R" alt="">
+              <a href="#" class="btn pattern">Contact Me</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header pattern">Content Creator</div>
+            <div class="card-body">
+              <h5 class="card-title">Dance the words</h5>
+              <p class="card-text">
+                Having trouble coming up with enough interesting visual material to break through the crowd and actually connect with your audience? I can assist you in creating the best content possible.
+              </p>
+              <!--copyright:---- https://www.stateofdigitalpublishing.com/content-strategy/what-is-a-content-creator/ -->
+              <img class="img-service" src="https://www.stateofdigitalpublishing.com/wp-content/uploads/2018/10/content-759x500.jpg" alt="">
+              <a href="#" class="btn pattern ">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+    <script src="./jquery/dist/jquery.min.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="./owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="/Scripts/app.js"></script>
+  </body>
+</html>
