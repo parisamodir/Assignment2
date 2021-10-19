@@ -7,10 +7,13 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 let app = express();
 
-mongoose.connect("mongodb://localhost/parisa", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://parisa:parisa@cluster0.ukv7z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/parisa",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 const db = mongoose.connection; // alias for the mongoose connection
 db.on("error", function () {

@@ -9,6 +9,10 @@ const userSchema = new Schema(
     password: String,
   },
   {
+    writeConcern: {
+      j: true,
+      wtimeout: 1000,
+    },
     collection: "users",
   }
 );

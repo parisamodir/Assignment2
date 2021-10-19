@@ -10,6 +10,10 @@ const Contactschema = new Schema(
     phonenumber: Number,
   },
   {
+    writeConcern: {
+      j: true,
+      wtimeout: 1000,
+    },
     collection: "Contacts",
   }
 );
