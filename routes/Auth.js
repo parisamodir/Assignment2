@@ -39,11 +39,12 @@ function ProcessLoginPage(req, res, next) {
 
 function ProcessRegisterPage(req, res, next) {
   // instantiate a new User Object
-  const { username, password } = req.body;
+  const { username, password, email } = req.body;
 
   const newUser = new users({
     username,
     password,
+    email,
   });
 
   users.register(newUser, password, (err) => {

@@ -7,20 +7,17 @@ Date: september 21, 2021 */
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 * {
   font-family: "Open Sans", sans-serif;
- 
 }
 .navigation {
   /*copyright:------>>>>>> https://www.vecteezy.com/free-vector/orange-background */
   /* background: url("/image/pattern-header.jpg") !important; */
   /* background-color: #402F4F !important; */
-  background-image: linear-gradient(180deg, #222020, #3a3333f6 )!important;
-  
+  background-image: linear-gradient(180deg, #222020, #3a3333f6) !important;
 }
 .font_logo {
   font-family: "Indie Flower", cursive;
   font-size: 32px;
   position: relative;
-  
 }
 
 .font_logo::after {
@@ -70,7 +67,7 @@ Date: september 21, 2021 */
 }
 .pattern {
   /* background: url("/image/pattern-header.jpg"); */
-  background-image: linear-gradient(180deg, #a5783e, #c54c2ef6 )!important;
+  background-image: linear-gradient(180deg, #a5783e, #c54c2ef6) !important;
   background-blend-mode: color;
   font-weight: 500;
   font-size: large;
@@ -91,9 +88,9 @@ Date: september 21, 2021 */
   font-family: "Indie Flower", cursive;
   font-size: 24px;
 }
-.card{
-  background-image: linear-gradient(180deg, #2c2b3f, #5c5151f6 )!important;
-  color:rgb(145, 136, 136) !important;
+.card {
+  background-image: linear-gradient(180deg, #2c2b3f, #5c5151f6) !important;
+  color: rgb(145, 136, 136) !important;
 }
 .card img {
   height: 300px;
@@ -111,45 +108,42 @@ Date: september 21, 2021 */
   overflow: hidden;
 }
 
-
-.btn_submit{
+.btn_submit {
   background-color: rgb(175, 106, 26);
-  border-color:#755c18;
-  color:#fff;
+  border-color: #755c18;
+  color: #fff;
 }
-.btn_submit:hover{
-  background-color:#b86521;
-  border-color:rgb(163, 73, 12);
+.btn_submit:hover {
+  background-color: #b86521;
+  border-color: rgb(163, 73, 12);
 }
-.img-service{
+.img-service {
   border-radius: 20%;
   box-shadow: #3f13329c -2px 2px 8px -1px;
   max-width: 399px;
   max-height: 195px;
   margin-right: 47px;
 }
-.img-service:hover{
+.img-service:hover {
   transform: skewX(5deg);
   transition: 2s;
 }
-.card-footer{
-  margin-top:20px;
+.card-footer {
+  margin-top: 20px;
 }
-.form-control{
-  background-image: linear-gradient(180deg, #222020, #362f2ff6 )!important;
+.form-control {
+  background-image: linear-gradient(180deg, #222020, #362f2ff6) !important;
   border-color: rgb(59, 54, 54);
   color: rgb(228, 218, 218);
-  
 }
-body{
-background-color: rgb(27, 31, 43);
+body {
+  background-color: rgb(27, 31, 43);
 }
-.font_mission{
+.font_mission {
   color: rgba(180, 167, 167, 0.856) !important;
 }
-hr{
+hr {
   color: rgb(184, 89, 26) !important;
-  
 }
 
 /* skills */
@@ -157,18 +151,20 @@ hr{
 hr.html {
   border: 10px solid rgb(224, 94, 7);
   border-radius: 5px;
-  width:90%;
+  width: 90%;
 }
 
-hr.css{
+hr.css {
   border: 10px solid rgb(224, 94, 7);
   border-radius: 5px;
-  width:80%;
+  width: 80%;
 }
-hr.js{
+hr.js {
   border: 10px solid rgb(224, 94, 7);
   border-radius: 5px;
-  width:60%;
-
+  width: 60%;
 }
 
+.form-control:focus {
+  color: #fff;
+}

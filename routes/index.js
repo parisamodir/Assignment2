@@ -38,13 +38,19 @@ router.get("/aboutme", function (req, res, next) {
 
 router.get("/login", function (req, res, next) {
   /* render aboutme page. */
-  const haveError = req.query.error
+  const haveError = req.query.error;
 
-  res.render("pages/login",{haveError});
+  res.render("pages/login", { haveError });
 });
 router.get("/register", function (req, res, next) {
   /* render aboutme page. */
 
   res.render("pages/register");
+});
+router.get("/logout", function (req, res, next) {
+  req.logOut();
+  delete req.session.logedin;
+  delete req.session.user;
+  res.redirect("/");
 });
 module.exports = router;

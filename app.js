@@ -30,6 +30,14 @@ let localStrategy = passportLocal.Strategy; // alias
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+app.use(function (req, res, next) {
+  app.locals.helpers = {
+    loggedIn: function () {
+      return req.session.user;
+    },
+  };
+  next();
+});
 app.use(
   session({
     secret: "secret",
