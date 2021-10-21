@@ -4,9 +4,13 @@ let users = require("../models/user");
 let passport = require("passport");
 const { isLoggedIn } = require("../helper/auth");
 const user = require("../models/user");
+// register route
 router.post("/register", ProcessRegisterPage);
 
+// login route
 router.post("/login", ProcessLoginPage);
+
+//   controller  for login
 function ProcessLoginPage(req, res, next) {
   passport.authenticate("local", (err, user, info) => {
     console.log(user);
@@ -21,7 +25,7 @@ function ProcessLoginPage(req, res, next) {
     if (!user) {
       return res.redirect("/login?error=true");
     }
-
+// login user with passport
     req.login(user, (err) => {
       // are there any db errors?
       if (err) {
@@ -30,23 +34,24 @@ function ProcessLoginPage(req, res, next) {
       }
 
       console.log("Logged in Successfully");
+      // save user in session for future use 
       req.session.logedin = true;
       req.session.user = user;
       return res.redirect("/contacts");
     });
   })(req, res, next);
 }
-
+// conteoler for register
 function ProcessRegisterPage(req, res, next) {
   // instantiate a new User Object
   const { username, password, email } = req.body;
-
+//create new user instance 
   const newUser = new users({
     username,
     password,
     email,
   });
-
+// register user with passport
   users.register(newUser, password, (err) => {
     if (err) {
       console.error("Error: Inserting New User");

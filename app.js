@@ -23,9 +23,8 @@ db.on("error", function () {
 });
 
 db.once("open", function () {
-  console.log(`Connected to MongoDB at: `);
+  console.log(`Connected to MongoDB at: attlas `);
 });
-let localStrategy = passportLocal.Strategy; // alias
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
