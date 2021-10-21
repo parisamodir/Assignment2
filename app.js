@@ -6,7 +6,9 @@ let logger = require("morgan");
 const mongoose = require("mongoose");
 const session = require("express-session");
 let app = express();
-
+let passport = require("passport");
+let User = require("./models/user.js");
+let passportLocal = require("passport-local");
 mongoose.connect(
   "mongodb+srv://parisa:parisa@cluster0.ukv7z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/parisa",
   {
@@ -23,6 +25,7 @@ db.on("error", function () {
 db.once("open", function () {
   console.log(`Connected to MongoDB at: `);
 });
+let localStrategy = passportLocal.Strategy; // alias
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -45,6 +48,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(path.join(__dirname, "node_modules")));
+
+// passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+// implement an Auth Strategy - "local" - username / password
+passport.use(User.createStrategy());
+
+// serialize and deserialize user data
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 // add routers
 
